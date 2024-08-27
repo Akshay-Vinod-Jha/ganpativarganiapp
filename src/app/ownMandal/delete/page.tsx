@@ -52,8 +52,7 @@ export default function Edit() {
       <HandlePortal setStatus={setStatus} status={status} />
       <h1>
         Greeting To{"  "}
-        <span className="text-orange-500">"{parentData.mandalname}"</span>{" "}
-        Mandal
+        <span className="text-orange-500">{parentData.mandalname}</span> Mandal
       </h1>
       <h1>
         Do You Really Want To Delete This Vargani of{" "}
