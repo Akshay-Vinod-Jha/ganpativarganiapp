@@ -106,6 +106,7 @@ export default function EditMandalDataPage() {
       {SupportingData.map((value, index) => {
         return (
           <AllComboiInput
+            notInclude={["mandaluid"]}
             key={`${value.keyName} ${index}`}
             label={value.keyName}
             ref={value.refValue}

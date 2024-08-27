@@ -5,8 +5,8 @@ import { FaSave } from "react-icons/fa";
 import EmojiButton from "./EmojiButton";
 const AllComboiInput = forwardRef<
   HTMLInputElement,
-  { label: string; value: string; type: string }
->(({ label, value, type }, ref) => {
+  { label: string; value: string; type: string; notInclude: string[] }
+>(({ label, value, type, notInclude }, ref) => {
   const [text, setText] = useState({
     readOnly: true,
     value: value,
@@ -45,7 +45,7 @@ const AllComboiInput = forwardRef<
               : "bg-white text-orange-500 "
           } border-2 border-gray-500`}
         />
-        {label !== "mandaluid" && (
+        {!notInclude.includes(label) && (
           <EmojiButton
             clickHandler={() => {
               setText((past) => {

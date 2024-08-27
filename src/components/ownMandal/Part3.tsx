@@ -1,5 +1,6 @@
 import { notedvarganitype } from "@/app/ownMandal/page";
 import CopyOption from "../common/CopyOption";
+import EditDeletePart from "./EditDeletePart";
 export type varganiindtype =
   | "varganiuid"
   | "varganidate"
@@ -39,6 +40,7 @@ export default function Part3({
                   key={`${value.varganiuid} ${index}`}
                   className="w-full flex justify-center items-center flex-col gap-2 h-full rounded-md bg-white px-2 py-4 border-2 border-gray-200 hover:border-black duration-150"
                 >
+                  <EditDeletePart value={value} />
                   {Object.keys(value).map((nestedvalue, nestedindex) => {
                     return (
                       <div

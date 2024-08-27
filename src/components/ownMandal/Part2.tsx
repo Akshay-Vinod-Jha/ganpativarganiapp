@@ -1,5 +1,4 @@
 "use client";
-
 import OrangeSpan from "../common/OrangeSpan";
 import { useEditedSelectorHook } from "@/store/useEditedHooks";
 export default function Part2() {
